@@ -17,11 +17,13 @@ public class Main {
 
 		System.out.println("Digite a mensagem a ser encriptada: ");
 		String mensagem = sc.nextLine();
-
 		Encrypter enc = new Encrypter();
 		ElGamal eg = new ElGamal();
 		BigInteger[] encriptada = eg.Encrypt(enc.Encrypt(mensagem));
-
+		System.out.println("");
+		System.out.println("p = " + eg.p.toString());
+		System.out.println("g = " + eg.g.toString());
+		System.out.println("t = " + eg.t.toString());
 		System.out.printf("\nMensagem encriptada:\n");
 		System.out.println(encriptada[0].toString());
 		System.out.println(encriptada[1].toString());

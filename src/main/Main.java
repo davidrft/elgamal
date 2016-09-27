@@ -25,19 +25,21 @@ public class Main {
 		System.out.println("g = " + eg.g.toString());
 		System.out.println("t = " + eg.t.toString());
 		System.out.printf("\nMensagem encriptada:\n");
-		System.out.println(encriptada[0].toString());
-		System.out.println(encriptada[1].toString());
+		System.out.println("y = " + encriptada[0].toString());
+		System.out.println("z = " + encriptada[1].toString());
 		System.out.printf("\nDeseja desencriptar a mensagem? (s/n)\n");
 		char opcao;
 		do {
 			opcao = sc.nextLine().charAt(0);
 		} while (opcao != 's' && opcao != 'n');
-		
+
 		if (opcao == 's') {
 			String desencriptada = enc.Decrypt(eg.Decrypt(encriptada));
 			System.out.printf("\nMensagem desencriptada:\n%s", desencriptada);
 		}
 		
+		System.out.printf("\n\nPressione ENTER para sair.");
+		opcao = sc.nextLine().charAt(0);
 		sc.close();
 	}
 }
